@@ -17,7 +17,12 @@ class OneAgentCrew():
     def __init__(self) -> None:
         # Load API key and Model from env or use defaults
         api_key = os.getenv("GEMINI_API_KEY")
+        if api_key:
+            api_key = api_key.strip('"').strip("'")
+            
         model = os.getenv("MODEL", "gemini/gemini-1.5-flash")
+        if model:
+            model = model.strip('"').strip("'")
         
         self.gemini_llm = LLM(
             model=model,
