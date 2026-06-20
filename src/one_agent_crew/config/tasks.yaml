@@ -1,0 +1,7 @@
+research_task:
+  description: >
+    Conduct a thorough research about '{topic}' using your research tool.
+    Analyze the tool's output and summarize the key findings.
+  expected_output: >
+    A structured summary of research findings about the topic, formatted in markdown.
+  agent: researcher
